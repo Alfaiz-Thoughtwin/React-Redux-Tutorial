@@ -41,7 +41,7 @@ body {
   background: lightgray;
 }
 
-.center__css {
+/* .center__css {
   flex-direction: column;
   align-items: center;
   margin-top: 200px;
@@ -66,4 +66,4 @@ body {
 
 .fs-4 {
   font-size: calc(1.275rem + 4.3vw) !important;
-}
+} */
