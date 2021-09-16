@@ -1,17 +1,35 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
 
-const App = () => {
-  const [count, setCount] = useState(0);
+const initialState = 0;
 
-  const decHandler = (event, data) => {
+const countReducer = (state, action) => {
+  // console.log(state, action);
+  if (action.type === 'DECREMENT') {
+    return state - 1;
+  }
+  if (action.type === 'INCREMENT') {
+    return state + 1;
+  }
+  return state;
+}
+
+const App = () => {
+
+  const [state, dispatch] = useReducer(countReducer, initialState)
+
+  const decHandler = (event) => {
     event.preventDefault();
-    setCount(count - 1);
+    dispatch({
+      type: "DECREMENT"
+    });
   }
 
-  const incHandler = (event, data) => {
+  const incHandler = (event) => {
     event.preventDefault();
-    setCount(count + 5);
+    dispatch({
+      type: "INCREMENT"
+    });
   }
 
   return (
@@ -22,11 +40,11 @@ const App = () => {
       </div>
       <div className="container d-flex center__css_2">
         <a className="btn anchor__css" title="Decrement" href="/" onClick={decHandler}><span>-</span></a>
-        <input type="text" className="form-control mx-4 text-center fs-4" value={count} onChange={(event) => event.target.value}/>
+        <input type="text" className="form-control mx-4 text-center fs-4" value={state} onChange={(event) => event.target.value}/>
         <a className="btn anchor__css" title="Increment" href="/" onClick={incHandler}><span>+</span></a>
       </div>
       <div className="container text-center mt-4">
-        <p>Decrement by 1 & Increment By 5</p>
+        <p>Decrement by 1 & Increment By 1</p>
       </div>
     </>
   )
