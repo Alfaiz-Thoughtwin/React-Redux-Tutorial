@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background: lightgray;
+}
+
+.center__css {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.center__css_2 {
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.anchor__css {
+  font-size: 60px;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: rgb(167 167 167);
+}
+
+.form-control {
+  width: 20%;
+}
+
+.fs-4 {
+  font-size: calc(1.275rem + 4.3vw) !important;
+}
