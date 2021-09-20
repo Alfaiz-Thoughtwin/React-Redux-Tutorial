@@ -54,9 +54,9 @@ const App = () => {
               <h4>Using React and Redux</h4>
             </div>
             <div className="container d-flex justify-content-center margin_css">
-              <a className="btn anchor__css" onClick={devHandler} title="Decrement" href="/"><span>/</span></a>
+              <a className="btn anchor__css" onClick={devHandler} title="Division" href="/"><span>/</span></a>
               <input type="text" name="quantity" className="form-control mx-4 text-center fs-4" value={myOtherState} onChange={(event) => event.target.value}/>
-              <a className="btn anchor__css" onClick={mulHandler}title="Increment" href="/"><span>*</span></a>
+              <a className="btn anchor__css" onClick={mulHandler}title="Multiplication" href="/"><span>*</span></a>
             </div>
             <div className="container text-center mt-4">
               <p>Division by 5 & Multiplication by 5</p>
