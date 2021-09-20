@@ -10,3 +10,16 @@ export const decNumber = () => {
         type: "DECREMENT"
     }
 }
+
+export const devNumber = () => {
+    return {
+        type: "DIVISION"
+    }
+}
+
+export const mulNumber = (data) => {
+    return {
+        type: "MULTIPLICATION",
+        data: data
+    }
+}

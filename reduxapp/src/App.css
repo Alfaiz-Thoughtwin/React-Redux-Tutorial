@@ -65,9 +65,13 @@ body {
 }
 
 .form-control {
-  width: 20%;
+  width: 50%;
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 4.3vw) !important;
+  font-size: calc(1.275rem + 3.3vw) !important;
+}
+
+.margin_css {
+  margin-top: 100px;
 }
